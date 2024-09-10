@@ -12,11 +12,13 @@ declare(strict_types=1);
 
 function removeElement(array &$nums, int $val): int
 {
+    if (count($nums) === 0) return 0; // Проверка на пустой массив
+
     $k = 0;  // Указатель для записи элементов, а также счетчик.
     $n = count($nums);
     for ($i = 0; $i < $n; $i++) {
         if ($nums[$i] !== $val) {
-            $nums[$k] = $nums[$i]; // Запсываем элемент если он не равен $val
+            $nums[$k] = $nums[$i]; // Запсываем элемент, если он не равен $val
             $k++;  // Увеличиваем счетчик на единицу
         }
     }
