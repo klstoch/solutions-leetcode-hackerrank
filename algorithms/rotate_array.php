@@ -67,14 +67,14 @@ function rotate2(array $nums, int $k): array
             $temp = $arr[$start];       // Меняем местами крайние элементы и двигаемся навстречу
             $arr[$start] = $arr[$end];
             $arr[$end] = $temp;
-            $start ++;
+            $start++;
             $end--;
         }
     }
 
-    reverse($nums, 0, $n-1); // Разворачиваем весь массив
-    reverse($nums, 0, $k-1); // Разворачиваем первые 'k' элементов
-    reverse($nums, $k, $n-1);  // Разворачиваем оставшиеся n - k элементов
+    reverse($nums, 0, $n - 1); // Разворачиваем весь массив
+    reverse($nums, 0, $k - 1); // Разворачиваем первые 'k' элементов
+    reverse($nums, $k, $n - 1);  // Разворачиваем оставшиеся n - k элементов
 
     return $nums;
 }
